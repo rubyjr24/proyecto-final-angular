@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "github-w": "ng build --base-href /dwec-angular/proyecto-final-angular/ && xcopy \".\\dist\\proyecto-final-angular\\browser\\*\" \"..\\gh-pages\\proyecto-final-angular\" /E /I /H /C /Y",
+    "github-l": "ng build --base-href '/dwec-angular/proyecto-final-angular/' && mkdir ../gh-pages/proyecto-final-angular && cp -r ./dist/proyecto-final-angular/browser/* ../gh-pages/proyecto-final-angular"
   },
   "prettier": {
     "printWidth": 100,

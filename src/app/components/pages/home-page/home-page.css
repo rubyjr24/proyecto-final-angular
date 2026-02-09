@@ -1,0 +1,6 @@
+#banner{
+    background: url('/assets/imgs/restaurante.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
