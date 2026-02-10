@@ -8,6 +8,6 @@ export const routes: Routes =  [
     { path: '', redirectTo: 'home', pathMatch: 'full'},
     { path: 'home', component: HomePage, title: 'Inicio' },
     { path: 'menu', component: MenuPage, title: 'Menú' },
-    { path: 'admin', component: FormDishPage, title: 'Formulario de creación' },
+    { path: 'admin', component: FormDishPage, title: 'Admin' },
     { path: 'login', component: LoginPage, title: 'Inicio de sesión' },
 ];

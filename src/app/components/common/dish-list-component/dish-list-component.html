@@ -1,0 +1,8 @@
+<div class="p-4 d-flex flex-wrap align-items-start justify-content-center gap-4">
+
+    @for(dish of dishes; track dish.id){
+    <dish-card-component [dish]="dish" [editable]="editable" [deleteable]="deleteable" [disableable]="disableable">
+    </dish-card-component>
+    }
+
+</div>

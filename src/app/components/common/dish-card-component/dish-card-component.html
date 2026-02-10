@@ -1,0 +1,28 @@
+<div class="card" style="width: 18rem;">
+
+    @if(disableable){
+        <input class="form-check-input position-absolute" style="top: 10px; right: 10px;" type="checkbox" [checked]="dish.enabled">
+    }
+
+    @if(dish.image){
+        <img src="{{dish.image}}" class="card-img-top" alt="Fotografia de {{dish.name}}">
+    }@else {
+        <div class="w-100 h-100 bg-info"></div>
+    }
+
+    <div class="card-body">
+        <h5 class="card-title text-center">{{dish.price | currency : 'EUR' : 'symbol' : '1.2-2'}}</h5>
+    </div>
+
+    <div class="px-2 pb-2 d-flex justify-content-end align-items-center gap-2">
+
+        @if(editable){
+            <button class="btn btn-primary"><i class="bi bi-pencil-square"></i></button>
+        }
+
+        @if(deleteable){
+            <button class="btn btn-danger"><i class="bi bi-trash-fill"></i></button>
+        }
+
+    </div>
+</div>

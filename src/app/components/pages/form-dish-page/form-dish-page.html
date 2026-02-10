@@ -1,1 +1,3 @@
-<p>form-dish-page works!</p>
+@if (dishes$ | async; as dishes){
+    <dish-list-component [dishes]="dishes" [editable]="true" [deleteable]="true" [disableable]="true"></dish-list-component>
+}
