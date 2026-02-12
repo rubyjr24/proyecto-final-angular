@@ -3,11 +3,12 @@ import { HomePage } from './components/pages/home-page/home-page';
 import { MenuPage } from './components/pages/menu-page/menu-page';
 import { FormDishPage } from './components/pages/form-dish-page/form-dish-page';
 import { LoginPage } from './components/pages/login-page/login-page';
+import { AuthGuard } from './guards/auth-guard';
 
 export const routes: Routes =  [
     { path: '', redirectTo: 'home', pathMatch: 'full'},
     { path: 'home', component: HomePage, title: 'Inicio' },
     { path: 'menu', component: MenuPage, title: 'Menú' },
-    { path: 'admin', component: FormDishPage, title: 'Admin' },
+    { path: 'admin', component: FormDishPage, title: 'Admin', canActivate: [AuthGuard]},
     { path: 'login', component: LoginPage, title: 'Inicio de sesión' },
 ];
