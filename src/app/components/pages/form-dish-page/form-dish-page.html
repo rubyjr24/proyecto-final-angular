@@ -1,6 +1,0 @@
-<div class="p-5">
-    <dish-form-component (newDishEmitter)="addNewDish($event)" [updateableDish]="dish"></dish-form-component>
-</div>
-@if (dishes$ | async; as dishes){
-    <dish-list-component [dishes]="dishes" [deleteDishEmitter]="deleteDishEmitter" [editDishEmitter]="editDishEmitter" [disableableDishEmitter]="disableableDishEmitter"></dish-list-component>
-}
