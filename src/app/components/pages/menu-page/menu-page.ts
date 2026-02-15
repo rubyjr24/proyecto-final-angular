@@ -4,10 +4,11 @@ import { IDish } from '../../../interfaces/i-dish';
 import { DishService } from '../../../services/dish-service';
 import { AsyncPipe } from '@angular/common';
 import { DishListComponent } from '../../common/dish-list-component/dish-list-component';
+import { AccesibilityMenuComponent } from '../../common/accesibility-menu-component/accesibility-menu-component';
 
 @Component({
 	selector: 'menu-page',
-	imports: [DishListComponent, AsyncPipe],
+	imports: [DishListComponent, AsyncPipe, AccesibilityMenuComponent],
 	templateUrl: './menu-page.html',
 	styleUrl: './menu-page.css',
 })
