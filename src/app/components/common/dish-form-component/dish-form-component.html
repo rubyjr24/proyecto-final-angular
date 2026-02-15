@@ -1,8 +1,8 @@
 <h2>Creación de plato</h2>
-<form class="mt-4" (ngSubmit)="addDish()">
+<form class="mt-4" (ngSubmit)="addDish()" #dishForm="ngForm">
     <div class="form-group">
         <label for="name">Nombre del plato</label>
-        <input type="text" class="form-control" name="name" [(ngModel)]="dish.name" placeholder="Nombre del plato">
+        <input type="text" class="form-control" name="name" [(ngModel)]="dish.name" placeholder="Nombre del plato" required>
     </div>
     <div class="form-group">
         <label for="description">Descripción</label>
@@ -10,10 +10,10 @@
     </div>
     <div class="form-group">
         <label for="price">Precio</label>
-        <input type="number" class="form-control" name="price" min="0.00" max="10000.00" step="0.01" [(ngModel)]="dish.price"/>
+        <input type="number" class="form-control" name="price" min="0.00" max="10000.00" step="0.01" [(ngModel)]="dish.price" required>
     </div>
     <div class="form-group mt-2">
-        <select class="form-select" [(ngModel)]="dish.catergory" name="catergory">
+        <select class="form-select" [(ngModel)]="dish.catergory" name="catergory" required>
             @for (dishType of dishTypes; track $index) {
                 <option [ngValue]="dishType" [selected]="dishType === dish.catergory">{{dishTypeLabels[dishType]}}</option>
             }
@@ -21,16 +21,16 @@
     </div>
     <div class="form-group">
         <label for="image">Imagen</label>
-        <input type="file" class="form-control" name="image" [(ngModel)]="dish.image" #fileImage (change)="changeImage(fileImage)">
+        <input type="file" class="form-control" name="image" [(ngModel)]="dish.image" #fileImage (change)="changeImage(fileImage)" required>
     </div>
     <div>
         <img [src]="dish.image" [ngStyle]="{'display': imageLoaded ? 'initial' : 'none'}" alt="" class="img-thumbnail">
     </div>
     
-    <button type="submit" class="btn btn-primary mt-2">{{updateableDish ? 'Actualizar Plato' : 'Crear Plato'}}</button>
+    <button [disabled]="dishForm.invalid" type="submit" class="btn btn-primary mt-2">{{updateableDish ? 'Actualizar Plato' : 'Crear Plato'}}</button>
 
     @if(updateableDish){
-        <button type="reset" class="btn btn-secondary mt-2 ms-2" (click)="resetDish(); updateableDish = undefined;">Crear nuevo plato</button>
+        <button [disabled]="dishForm.invalid" type="reset" class="btn btn-secondary mt-2 ms-2" (click)="resetDish(); updateableDish = undefined;">Crear nuevo plato</button>
     }
 
 </form>

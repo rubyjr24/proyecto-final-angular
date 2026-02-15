@@ -53,10 +53,9 @@ export class DishFormComponent {
       });
     }
 
-    
-    
     this.resetDish();
     this.imageLoaded = false;
+    this.updateableDish = undefined;
   }
 
   changeImage(fileInput: HTMLInputElement) {
