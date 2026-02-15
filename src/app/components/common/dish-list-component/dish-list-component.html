@@ -1,7 +1,7 @@
-<div class="p-4 d-flex flex-wrap align-items-start justify-content-center gap-4">
+<div class="p-5 d-flex flex-wrap align-items-start justify-content-around gap-4">
 
     @for(dish of dishes; track dish.id){
-    <dish-card-component [dish]="dish" [editable]="editable" [deleteable]="deleteable" [disableable]="disableable">
+    <dish-card-component [dish]="dish" [deleteDishEmitter]="deleteDishEmitter" [editDishEmitter]="editDishEmitter" [disableableDishEmitter]="disableableDishEmitter">
     </dish-card-component>
     }
 

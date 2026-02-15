@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input } from '@angular/core';
 import { IDish } from '../../../interfaces/i-dish';
 import { DishCardComponent } from '../dish-card-component/dish-card-component';
 
@@ -10,7 +10,9 @@ import { DishCardComponent } from '../dish-card-component/dish-card-component';
 })
 export class DishListComponent {
     @Input() dishes!: IDish[];
-    @Input() editable: boolean = false;
-    @Input() deleteable: boolean = false;
-    @Input() disableable: boolean = false;
+
+    @Input() editDishEmitter?: EventEmitter<IDish>;
+    @Input() deleteDishEmitter?: EventEmitter<IDish>;
+    @Input() disableableDishEmitter?: EventEmitter<IDish>;
+
 }

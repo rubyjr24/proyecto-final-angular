@@ -7,10 +7,20 @@
                 </a>
 
                 <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
-                    <li><a href="/menu" class="nav-link text-white">Carta</a></li>
-                    <li><a href="/admin" class="nav-link text-white">Gestión</a></li>
-                    <li><a href="/login" class="nav-link text-white">Iniciar sesión</a></li>
-                    <li><a href="/logout" class="nav-link text-white">Cerrar sesión</a></li>
+                    @if(loggedIn$ | async){
+
+                        <li><a href="/menu" class="nav-link text-white">Carta</a></li>
+
+                        @if(isChef$ | async; as isChef){
+                            <li><a href="/admin" class="nav-link text-white">Gestión</a></li>
+                        }
+                        <li><a href="/home" (click)="logout()" class="nav-link text-white">Cerrar sesión</a></li>
+                    }
+                    
+                    @else {
+                        <li><a href="/login" class="nav-link text-white">Iniciar sesión</a></li>
+                    }
+
                 </ul>
             </div>
         </div>

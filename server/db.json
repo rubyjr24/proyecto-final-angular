@@ -24,60 +24,6 @@
             "category": "entrantes",
             "image": "https://picsum.photos/200/300",
             "enabled": true
-        },
-        {
-            "id": "2",
-            "name": "Ensalada de tomate",
-            "description": "Ensalada de tomate con aceite de oliva virgen extra",
-            "price": 5.50,
-            "category": "entrantes",
-            "image": "https://picsum.photos/200/300",
-            "enabled": true
-        },
-        {
-            "id": "3",
-            "name": "Ensalada de tomate",
-            "description": "Ensalada de tomate con aceite de oliva virgen extra",
-            "price": 5.50,
-            "category": "entrantes",
-            "image": "https://picsum.photos/200/300",
-            "enabled": true
-        },
-        {
-            "id": "3",
-            "name": "Ensalada de tomate",
-            "description": "Ensalada de tomate con aceite de oliva virgen extra",
-            "price": 5.50,
-            "category": "entrantes",
-            "image": "https://picsum.photos/200/300",
-            "enabled": false
-        },
-        {
-            "id": "3",
-            "name": "Ensalada de tomate",
-            "description": "Ensalada de tomate con aceite de oliva virgen extra",
-            "price": 5.50,
-            "category": "entrantes",
-            "image": "https://picsum.photos/200/300",
-            "enabled": false
-        },
-        {
-            "id": "3",
-            "name": "Ensalada de tomate",
-            "description": "Ensalada de tomate con aceite de oliva virgen extra",
-            "price": 5.50,
-            "category": "entrantes",
-            "image": "https://picsum.photos/200/300",
-            "enabled": false
-        },
-        {
-            "id": "3",
-            "name": "Ensalada de tomate",
-            "description": "Ensalada de tomate con aceite de oliva virgen extra",
-            "price": 5.50,
-            "category": "entrantes",
-            "image": "https://picsum.photos/200/300",
-            "enabled": false
         }
     ]
 }

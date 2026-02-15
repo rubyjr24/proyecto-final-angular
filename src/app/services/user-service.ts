@@ -24,4 +24,22 @@ export class UserService {
         );
     }
 
+    getRole(username: string, password: string): Observable<string | null> {
+        return this.http.get<IUser[]>(this.endpoint).pipe(
+            map(users => {
+                const usersFiltered = users.filter(
+                    user => user.username === username && user.password === password
+                );
+
+                if (usersFiltered && usersFiltered.length === 1){
+                    return usersFiltered[0].role;
+                }
+
+                return null;
+            }
+                
+            )
+        );
+    }
+
 }
